@@ -68,33 +68,119 @@ def print_squares():
 print_squares()
 ```
 The square of 100 is 10000
+<br/>
 The square of 102 is 10404
+<br/>
 The square of 104 is 10816
+<br/>
 The square of 106 is 11236
+<br/>
 The square of 108 is 11664
+<br/>
 The square of 110 is 12100
+<br/>
 The square of 112 is 12544
+<br/>
 The square of 114 is 12996
+<br/>
 The square of 116 is 13456
+<br/>
 The square of 118 is 13924
+<br/>
 The square of 120 is 14400
+<br/>
 The square of 122 is 14884
+<br/>
 The square of 124 is 15376
+<br/>
 The square of 126 is 15876
+<br/>
 The square of 128 is 16384
+<br/>
 The square of 130 is 16900
+<br/>
 The square of 132 is 17424
+<br/>
 The square of 134 is 17956
+<br/>
 The square of 136 is 18496
+<br/>
 The square of 138 is 19044
+<br/>
 The square of 140 is 19600
+<br/>
 The square of 142 is 20164
+<br/>
 The square of 144 is 20736
+<br/>
 The square of 146 is 21316
+<br/>
 The square of 148 is 21904
+<br/>
 ...
+<br/>
 The square of 194 is 37636
+<br/>
 The square of 196 is 38416
+<br/>
 The square of 198 is 39204
+<br/>
 The square of 200 is 40000
+<br/>
 Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+<br/>
+
+Exercise 4: Word counter
+<br/>
+write a program to count the number of words in a given text.
+<br/>
+
+```ruby
+def count_words(text):
+    # Split the text into words using whitespace as the delimiter
+    words = text.split()
+    # Count the number of words
+    num_words = len(words)
+    return num_words
+
+# Ask the user to input a text
+user_text = input("Enter a text: ")
+
+# Count the number of words in the user's text
+word_count = count_words(user_text)
+
+# Display the result
+print(f"The number of words in the given text is: {word_count}")
+```
+
+<br/>
+
+Enter a text: this world is full of beautiful natural tress and rain drops are increasing because of these trees in the mountains
+<br/>
+The number of words in the given text is: 20
+<br/>
+
+Exercise 5: Check for Palindrome
+<br/>
+Write a Python function called is_palindrome that takes a string as input and returns True if the string is a palindrome, and False otherwise. A palindrome is a word, 
+<br/>
+phrase, number, or other sequence of characters that reads the same forward and backward, ignoring spaces, punctuation, and capitalization.
+<br/>
+
+```ruby
+import string
+
+def is_palindrome(s):
+    # Remove spaces and punctuation, and convert to lowercase
+    cleaned_string = ''.join(char.lower() for char in s if char.isalnum())
+
+    # Check if the cleaned string is equal to its reverse
+    return cleaned_string == cleaned_string[::-1]
+
+# Example usage
+example_string = "mom"
+print(f"Is the string '{example_string}' a palindrome? {is_palindrome(example_string)}")
+```
+<br/>
+
+Is the string 'mom' a palindrome? True
